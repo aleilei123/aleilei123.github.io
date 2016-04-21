@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2016 | Hexo</title>
+  <title>css清除浮动 | Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -221,64 +221,55 @@
 
         <!-- ============================ END Hero Image =========================== -->
       
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/04/21/css清除浮动/">css清除浮动</a></h4>
-                            
-                            <p><time datetime="2016-04-21T07:26:46.000Z"><a href="/2016/04/21/css清除浮动/">2016-04-21</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/04/15/demo之上下滚动/">demo之上下滚动</a></h4>
-                            
-                            <p><time datetime="2016-04-15T01:54:25.000Z"><a href="/2016/04/15/demo之上下滚动/">2016-04-15</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/04/13/github-hexo搭建个人博客/">github+hexo搭建个人博客</a></h4>
-                            
-                            <p><time datetime="2016-04-13T05:46:14.000Z"><a href="/2016/04/13/github-hexo搭建个人博客/">2016-04-13</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/04/12/hello-world/">Hello World</a></h4>
-                            
-                            <p><time datetime="2016-04-12T13:54:26.235Z"><a href="/2016/04/12/hello-world/">2016-04-12</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-04-21T07:26:46.000Z" itemprop="datePublished">
+          2016-04-21
+      </time>
+    
+</span>
+                <h1>css清除浮动</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="css清除浮动"><a href="#css清除浮动" class="headerlink" title="css清除浮动"></a>css清除浮动</h3><h5 id="css清除浮动蛮坑人的。看这段代码"><a href="#css清除浮动蛮坑人的。看这段代码" class="headerlink" title="css清除浮动蛮坑人的。看这段代码"></a>css清除浮动蛮坑人的。看这段代码</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class="wrap"&gt;</span><br><span class="line">        &lt;div class="logo"&gt;</span><br><span class="line">            &lt;div class="logo_left"&gt;</span><br><span class="line">                &lt;img src="images/logo.jpg" alt="慕课网"&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class="logo_right"&gt;</span><br><span class="line">                &lt;img src="images/tel.jpg" alt="服务热线"&gt;24小时服务热线:&lt;span class="tel"&gt;123-456-7890&lt;/span&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;&lt;!-- logo区结束 --&gt;</span><br><span class="line">        &lt;div class="nav"&gt;</span><br><span class="line">            &lt;div class="nav_left"&gt;</span><br><span class="line">                </span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class="nav_middle"&gt;</span><br><span class="line">                &lt;div class="nav_middle_left"&gt;</span><br><span class="line">                    &lt;ul&gt;</span><br><span class="line">                        &lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;首页&lt;/li&gt;</span><br><span class="line">                    &lt;/ul&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">                &lt;div class="nav_middle_right"&gt;</span><br><span class="line">                    &lt;form action="" method="post"&gt;</span><br><span class="line">                        &lt;input type="text"&gt;&lt;/input&gt;</span><br><span class="line">                    &lt;/form&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class="nav_right"&gt;</span><br><span class="line">                </span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;&lt;!--nav结束 --&gt;</span><br><span class="line">    &lt;/div&gt;&lt;!-- wrap结束 --&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="给他设置css-样式"><a href="#给他设置css-样式" class="headerlink" title="给他设置css 样式"></a>给他设置css 样式</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">.wrap&#123;</span><br><span class="line">    width:<span class="number">1000</span>px;</span><br><span class="line">    margin: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br><span class="line">.logo&#123;</span><br><span class="line">    height: <span class="number">80</span>px;</span><br><span class="line">    background-color: <span class="comment">#ffffff;</span></span><br><span class="line">&#125;</span><br><span class="line">.logo_left&#123;</span><br><span class="line">    width: <span class="number">200</span>px;</span><br><span class="line">    float: left;</span><br><span class="line">&#125;</span><br><span class="line">.logo_right&#123;</span><br><span class="line">    width: <span class="number">300</span>px;</span><br><span class="line">    float: right;</span><br><span class="line">    height: <span class="number">28</span>px;</span><br><span class="line">    margin-top: <span class="number">30</span>px;</span><br><span class="line">    color: <span class="comment">#8e8e8e;</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">.logo_right img&#123;</span><br><span class="line">    vertical-align: middle;</span><br><span class="line">    margin-right: <span class="number">10</span>px;</span><br><span class="line">&#125;</span><br><span class="line">.tel&#123;</span><br><span class="line">    font-family: <span class="string">"微软雅黑"</span>;</span><br><span class="line">    color: <span class="comment">#c00;</span></span><br><span class="line">    font-size: <span class="number">16</span>px;</span><br><span class="line">&#125;</span><br><span class="line">.nav&#123;</span><br><span class="line">    clear:both;//这里清除浮动很重要！！！</span><br><span class="line">    height: <span class="number">40</span>px;</span><br><span class="line">    background-color: green;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.nav_left&#123;</span><br><span class="line">    width: <span class="number">10</span>px;</span><br><span class="line">    height: <span class="number">40</span>px;</span><br><span class="line">    background-color: red;</span><br><span class="line">    float: left; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="如果不清除浮动，运行结果是这样的-，没有达到我们想要的效果"><a href="#如果不清除浮动，运行结果是这样的-，没有达到我们想要的效果" class="headerlink" title="如果不清除浮动，运行结果是这样的  ，没有达到我们想要的效果"></a>如果不清除浮动，运行结果是这样的  ，没有达到我们想要的效果</h5><p><img src="http://ww1.sinaimg.cn/mw690/c20f0815gw1f34d8ehd5xj20rr03c0sx.jpg" alt="Alt text"></p>
+<h5 id="清除浮动，运行结果是这样的"><a href="#清除浮动，运行结果是这样的" class="headerlink" title="清除浮动，运行结果是这样的"></a>清除浮动，运行结果是这样的</h5><p><img src="http://ww1.sinaimg.cn/mw690/c20f0815gw1f34d8e0ch9j20rr03fweu.jpg" alt="Alt text"></p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/04/15/demo之上下滚动/">
+        demo之上下滚动 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/04/21/css清除浮动/" data-title="css清除浮动" data-url="http://yoursite.com/2016/04/21/css清除浮动/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
