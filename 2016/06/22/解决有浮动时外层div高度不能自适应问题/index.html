@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>我做过的demo | Hexo</title>
+  <title>解决有浮动时外层div高度不能自适应问题 | Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -226,34 +226,35 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-06-06T06:40:53.000Z" itemprop="datePublished">
-          2016-06-06
+      <time datetime="2016-06-22T10:29:03.000Z" itemprop="datePublished">
+          2016-06-22
       </time>
     
 </span>
-                <h1>我做过的demo</h1>
+                <h1>解决有浮动时外层div高度不能自适应问题</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		
+      		<h3 id="当html代码如下"><a href="#当html代码如下" class="headerlink" title="当html代码如下"></a>当html代码如下</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/1.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/1.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/1.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/1.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/1.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="他的css样式为"><a href="#他的css样式为" class="headerlink" title="他的css样式为"></a>他的css样式为</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">800px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#150707</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">li</span>&#123;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="由于li设置了浮动，脱离了标准文档流-，所以div的高度没有自适应"><a href="#由于li设置了浮动，脱离了标准文档流-，所以div的高度没有自适应" class="headerlink" title="由于li设置了浮动，脱离了标准文档流 ，所以div的高度没有自适应"></a>由于li设置了浮动，脱离了标准文档流 ，所以div的高度没有自适应</h3><p><img src="http://ww1.sinaimg.cn/mw690/c20f0815gw1f546w5pu5rj20mr05474v.jpg" alt="Alt text"><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/1.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/1.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/1.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/1.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"images/1.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clearfloat"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfloat</span>&#123;</span><br><span class="line">     <span class="attribute">clear</span>: both;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="解决方法是在浮动之后，最大div之前加入一个div清除浮动"><a href="#解决方法是在浮动之后，最大div之前加入一个div清除浮动" class="headerlink" title="解决方法是在浮动之后，最大div之前加入一个div清除浮动"></a>解决方法是在浮动之后，最大div之前加入一个div清除浮动</h3><p><img src="http://ww1.sinaimg.cn/mw690/c20f0815gw1f546vps3e1j20mn052mxr.jpg" alt="Alt text"></p>
+
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2016/06/13/我的demo/" style="float: left;">
-        ← 我的demo
-    </a>
     
-    
-    <a class="pull-right" href="/2016/05/24/js运算流程/">
-        js运算流程 →
+    <a class="pull-right" href="/2016/06/13/我的demo/">
+        我的demo →
     </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/06/06/我做过的demo/" data-title="我做过的demo" data-url="http://yoursite.com/2016/06/06/我做过的demo/"></div>
+<div class="ds-thread" data-thread-key="2016/06/22/解决有浮动时外层div高度不能自适应问题/" data-title="解决有浮动时外层div高度不能自适应问题" data-url="http://yoursite.com/2016/06/22/解决有浮动时外层div高度不能自适应问题/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"duoshuo_name"};
 (function() {
