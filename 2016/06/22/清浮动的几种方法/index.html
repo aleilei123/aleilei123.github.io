@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2016/6 | Hexo</title>
+  <title>清浮动的几种方法 | Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -221,55 +221,51 @@
 
         <!-- ============================ END Hero Image =========================== -->
       
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/06/22/清浮动的几种方法/">清浮动的几种方法</a></h4>
-                            
-                            <p><time datetime="2016-06-22T12:51:25.000Z"><a href="/2016/06/22/清浮动的几种方法/">2016-06-22</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/06/22/解决有浮动时外层div高度不能自适应问题/">解决有浮动时外层div高度不能自适应问题</a></h4>
-                            
-                            <p><time datetime="2016-06-22T10:29:03.000Z"><a href="/2016/06/22/解决有浮动时外层div高度不能自适应问题/">2016-06-22</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/06/13/我的demo/">我的demo</a></h4>
-                            
-                            <p><time datetime="2016-06-13T03:01:37.000Z"><a href="/2016/06/13/我的demo/">2016-06-13</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-06-22T12:51:25.000Z" itemprop="datePublished">
+          2016-06-22
+      </time>
+    
+</span>
+                <h1>清浮动的几种方法</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="1-给父级添加浮动"><a href="#1-给父级添加浮动" class="headerlink" title="1.给父级添加浮动"></a>1.给父级添加浮动</h3><h4 id="页面中所有元素都加父级，且margin左右自动会失效"><a href="#页面中所有元素都加父级，且margin左右自动会失效" class="headerlink" title="页面中所有元素都加父级，且margin左右自动会失效"></a>页面中所有元素都加父级，且margin左右自动会失效</h4><h3 id="2-给父级添加display-inline-block"><a href="#2-给父级添加display-inline-block" class="headerlink" title="2.给父级添加display:inline-block"></a>2.给父级添加display:inline-block</h3><h4 id="margin左右自动会失效"><a href="#margin左右自动会失效" class="headerlink" title="margin左右自动会失效"></a>margin左右自动会失效</h4><h3 id="3-给浮动元素后面加一个div，设置样式-clear-both-font-size-0-height-0px-c"><a href="#3-给浮动元素后面加一个div，设置样式-clear-both-font-size-0-height-0px-c" class="headerlink" title="3.给浮动元素后面加一个div，设置样式{clear:both;font-size:0;height:0px;}c"></a>3.给浮动元素后面加一个div，设置样式{clear:both;font-size:0;height:0px;}c</h3><h4 id="IE6下不兼容"><a href="#IE6下不兼容" class="headerlink" title="IE6下不兼容"></a>IE6下不兼容</h4><h3 id="4-在浮动元素下加"><a href="#4-在浮动元素下加" class="headerlink" title="4.在浮动元素下加 "></a>4.在浮动元素下加 <br clear="all"></h3><h4 id="不符合W3C标准，即结构，样式，行为三者分离"><a href="#不符合W3C标准，即结构，样式，行为三者分离" class="headerlink" title="不符合W3C标准，即结构，样式，行为三者分离"></a>不符合W3C标准，即结构，样式，行为三者分离</h4><h3 id="5-给父级添加-after-content-“”-display-block-clear-both"><a href="#5-给父级添加-after-content-“”-display-block-clear-both" class="headerlink" title="5.给父级添加:after{content: “”;display: block;clear: both;}"></a>5.给父级添加:after{content: “”;display: block;clear: both;}</h3><h4 id="IE6-7要在父级加-zoom-1"><a href="#IE6-7要在父级加-zoom-1" class="headerlink" title="IE6,7要在父级加{zoom:1}"></a>IE6,7要在父级加{zoom:1}</h4>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/06/22/解决有浮动时外层div高度不能自适应问题/">
+        解决有浮动时外层div高度不能自适应问题 →
+    </a>
+    
+</nav>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
-        </div>
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/06/22/清浮动的几种方法/" data-title="清浮动的几种方法" data-url="http://yoursite.com/2016/06/22/清浮动的几种方法/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
