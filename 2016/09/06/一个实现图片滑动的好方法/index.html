@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2016/9 | Hexo</title>
+  <title>一个实现图片滑动的好方法 | Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -221,55 +221,93 @@
 
         <!-- ============================ END Hero Image =========================== -->
       
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/09/06/一个实现图片滑动的好方法/">一个实现图片滑动的好方法</a></h4>
-                            
-                            <p><time datetime="2016-09-06T12:26:31.000Z"><a href="/2016/09/06/一个实现图片滑动的好方法/">2016-09-06</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/09/06/一张图渐变消失下面的图慢慢出现的方法/">一张图渐变消失下面的图慢慢出现的方法</a></h4>
-                            
-                            <p><time datetime="2016-09-06T12:17:35.000Z"><a href="/2016/09/06/一张图渐变消失下面的图慢慢出现的方法/">2016-09-06</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/09/05/css实现背景渐变/">css实现背景渐变</a></h4>
-                            
-                            <p><time datetime="2016-09-05T13:02:23.000Z"><a href="/2016/09/05/css实现背景渐变/">2016-09-05</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-09-06T12:26:31.000Z" itemprop="datePublished">
+          2016-09-06
+      </time>
+    
+</span>
+                <h1>一个实现图片滑动的好方法</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<p>###<br>经常做图片滑动，虽然做得出来，但是难免复杂一些。今天发现了一个好方法。</p>
+<p>###<br>```</p>
+<p><div id="main"></div></p>
+<p><ul></ul></p>
+<p><li><img src="1.jpg" width="1000" height="700"></li></p>
+<p><li><img src="1.jpg" width="1000" height="700"></li></p>
+<p><li><img src="1.jpg" width="1000" height="700"></li></p>
+<p><li><img src="1.jpg" width="1000" height="700"></li></p>
+<p><li><img src="1.jpg" width="1000" height="700"></li><br><br></p>
+<h2 id="lt-lt-lt-lt-lt-lt-lt"><a href="#lt-lt-lt-lt-lt-lt-lt" class="headerlink" title="&lt;&lt;&lt;&lt;&lt;&lt;&lt;"></a><a href="javascript:void(0);" id="prv" target="_blank" rel="external">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</a></h2><p><a href="javascript:void(0);" id="next" target="_blank" rel="external">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</a></p>
+<script type="text/javascript">
+$(function(){
+$("#main ul").css({"width":$("#main ul li").length*1000,"margin-left":-1000});//定义css
+defaultime = setInterval(action,4000);//定时
+//定义动作
+function action(action){
+if(action == 'L'){//向左
+$('#main ul').stop().animate({marginLeft:-2000},1000,function(){//定义滑动效果
+$('#main ul').css('margin-left',-1000);//滑动后改变margin-left为-1000(复位)
+$('#main ul li:first').appendTo($('#main ul'));//ul下的li的第一个置于最后
+});
+}else{//向右
+$('#main ul li:last').prependTo($('#main ul'));//将ul下的最后一个li置于第一个
+$('#main ul').stop().animate({marginLeft:0},1000,function(){//定义滑动效果
+$('#main ul').css('margin-left',-1000);//滑动后改变margin-left为-1000(复位)
+});
+}
+}
+//下面调取上面设定好的动作
+//触发动作上一张
+$("#prv").click(function(){//点击触发
+clearInterval(defaultime);//清除定时
+action("L");//调取向左滑动
+defaultime = setInterval(action,4000);//继续定时
+});
+//触发动作下一张
+$("#next").click(function(){//点击触发
+clearInterval(defaultime);//清除定时
+action("R");//调取向右滑动
+defaultime = setInterval(action,4000);//继续定时
+});
+});
+</script>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/09/06/一张图渐变消失下面的图慢慢出现的方法/">
+        一张图渐变消失下面的图慢慢出现的方法 →
+    </a>
+    
+</nav>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
-        </div>
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/09/06/一个实现图片滑动的好方法/" data-title="一个实现图片滑动的好方法" data-url="http://yoursite.com/2016/09/06/一个实现图片滑动的好方法/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
