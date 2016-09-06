@@ -236,48 +236,8 @@
         </div>
         <div class="col-md-8 col-md-offset-2">
       		<p>###<br>经常做图片滑动，虽然做得出来，但是难免复杂一些。今天发现了一个好方法。</p>
-<p>###<br>```</p>
-<p><div id="main"></div></p>
-<p><ul></ul></p>
-<p><li><img src="1.jpg" width="1000" height="700"></li></p>
-<p><li><img src="1.jpg" width="1000" height="700"></li></p>
-<p><li><img src="1.jpg" width="1000" height="700"></li></p>
-<p><li><img src="1.jpg" width="1000" height="700"></li></p>
-<p><li><img src="1.jpg" width="1000" height="700"></li><br><br></p>
-<h2 id="lt-lt-lt-lt-lt-lt-lt"><a href="#lt-lt-lt-lt-lt-lt-lt" class="headerlink" title="&lt;&lt;&lt;&lt;&lt;&lt;&lt;"></a><a href="javascript:void(0);" id="prv" target="_blank" rel="external">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</a></h2><p><a href="javascript:void(0);" id="next" target="_blank" rel="external">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</a></p>
-<script type="text/javascript">
-$(function(){
-$("#main ul").css({"width":$("#main ul li").length*1000,"margin-left":-1000});//定义css
-defaultime = setInterval(action,4000);//定时
-//定义动作
-function action(action){
-if(action == 'L'){//向左
-$('#main ul').stop().animate({marginLeft:-2000},1000,function(){//定义滑动效果
-$('#main ul').css('margin-left',-1000);//滑动后改变margin-left为-1000(复位)
-$('#main ul li:first').appendTo($('#main ul'));//ul下的li的第一个置于最后
-});
-}else{//向右
-$('#main ul li:last').prependTo($('#main ul'));//将ul下的最后一个li置于第一个
-$('#main ul').stop().animate({marginLeft:0},1000,function(){//定义滑动效果
-$('#main ul').css('margin-left',-1000);//滑动后改变margin-left为-1000(复位)
-});
-}
-}
-//下面调取上面设定好的动作
-//触发动作上一张
-$("#prv").click(function(){//点击触发
-clearInterval(defaultime);//清除定时
-action("L");//调取向左滑动
-defaultime = setInterval(action,4000);//继续定时
-});
-//触发动作下一张
-$("#next").click(function(){//点击触发
-clearInterval(defaultime);//清除定时
-action("R");//调取向右滑动
-defaultime = setInterval(action,4000);//继续定时
-});
-});
-</script>
+<p>###<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id="main"&gt;</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">&lt;li&gt;&lt;img src="1.jpg" width="1000" height="700"/&gt;&lt;/li&gt;</span><br><span class="line">&lt;li&gt;&lt;img src="1.jpg" width="1000" height="700"/&gt;&lt;/li&gt;</span><br><span class="line">&lt;li&gt;&lt;img src="1.jpg" width="1000" height="700"/&gt;&lt;/li&gt;</span><br><span class="line">&lt;li&gt;&lt;img src="1.jpg" width="1000" height="700"/&gt;&lt;/li&gt;</span><br><span class="line">&lt;li&gt;&lt;img src="1.jpg" width="1000" height="700"/&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;a href="javascript:void(0);" id="prv"&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;/a&gt;</span><br><span class="line">---------</span><br><span class="line">&lt;a href="javascript:void(0);" id="next"&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;/a&gt;</span><br><span class="line">&lt;script type="text/javascript"&gt;</span><br><span class="line">$(function()&#123;</span><br><span class="line">$("#main ul").css(&#123;"width":$("#main ul li").length*1000,"margin-left":-1000&#125;);//定义css</span><br><span class="line">defaultime = setInterval(action,4000);//定时</span><br><span class="line">//定义动作</span><br><span class="line">function action(action)&#123;</span><br><span class="line">if(action == 'L')&#123;//向左</span><br><span class="line">$('#main ul').stop().animate(&#123;marginLeft:-2000&#125;,1000,function()&#123;//定义滑动效果</span><br><span class="line">$('#main ul').css('margin-left',-1000);//滑动后改变margin-left为-1000(复位)</span><br><span class="line">$('#main ul li:first').appendTo($('#main ul'));//ul下的li的第一个置于最后</span><br><span class="line">&#125;);</span><br><span class="line">&#125;else&#123;//向右</span><br><span class="line">$('#main ul li:last').prependTo($('#main ul'));//将ul下的最后一个li置于第一个</span><br><span class="line">$('#main ul').stop().animate(&#123;marginLeft:0&#125;,1000,function()&#123;//定义滑动效果</span><br><span class="line">$('#main ul').css('margin-left',-1000);//滑动后改变margin-left为-1000(复位)</span><br><span class="line">&#125;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">//下面调取上面设定好的动作</span><br><span class="line">//触发动作上一张</span><br><span class="line">$("#prv").click(function()&#123;//点击触发</span><br><span class="line">clearInterval(defaultime);//清除定时</span><br><span class="line">action("L");//调取向左滑动</span><br><span class="line">defaultime = setInterval(action,4000);//继续定时</span><br><span class="line">&#125;);</span><br><span class="line">//触发动作下一张</span><br><span class="line">$("#next").click(function()&#123;//点击触发</span><br><span class="line">clearInterval(defaultime);//清除定时</span><br><span class="line">action("R");//调取向右滑动</span><br><span class="line">defaultime = setInterval(action,4000);//继续定时</span><br><span class="line">&#125;);</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
