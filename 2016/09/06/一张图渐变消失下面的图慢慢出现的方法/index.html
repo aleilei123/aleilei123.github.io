@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>css实现背景渐变 | Hexo</title>
+  <title>一张图渐变消失下面的图慢慢出现的方法 | Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -226,36 +226,42 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-09-05T13:02:23.000Z" itemprop="datePublished">
-          2016-09-05
+      <time datetime="2016-09-06T12:17:35.000Z" itemprop="datePublished">
+          2016-09-06
       </time>
     
 </span>
-                <h1>css实现背景渐变</h1>
+                <h1>一张图渐变消失下面的图慢慢出现的方法</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>###<br>本来是想做图片渐变的，可惜没有找到合适的方法，突发奇想，想着给图片在遮罩一层，相当于设置背景渐变。终于找到了背景渐变的好方法<br><a href="http://jingyan.baidu.com/article/8065f87fed4a3f233124989c.html" target="_blank" rel="external">背景渐变</a></p>
-<p>###</p>
-
+      		<p>####<br>困扰了一天的上面图慢慢消失，下面的图慢慢出现的效果终于实现了。要注意的有两点：<br>1.改变z-index值要给img的父级li加。因为li的顺序决定了图片的显示顺序。2.改变<br>z-index要在结束动画后执行，不然zindex大的会直接覆盖在上面，以至于看不到效果.<br>什么都不说了，直接上代码。</p>
+<p>####<br>```<br>&lt;!DOCTYPE html&gt;</p>
+<html lang="en"><br><head><br>    <meta charset="UTF-8"><br>    <title>Document</title><br>    <style type="text/css"><br>    <em>{<br>        margin:0px;<br>        padding:0px;<br>        list-style: none;<br>    }<br>    .parent{<br>        position: relative;<br>        width: 1000px;<br>        height: 500px;<br><br>    }<br>    .parent li{<br>        width: 1000px;<br>        height: 500px;<br>        position: absolute;<br>    }<br>    .parent li img{<br>        width: 1000px;<br>        height: 500px;<br><br>    }<br>    .parent li:nth-of-type(1){<br>        /</em>position: relative;<em>/<br><br>        opacity: 1;<br>    }<br>    .parent li:nth-of-type(2){<br>        /</em>position: absolute;<em>/<br><br>        opacity: 1;<br>        /</em>z-index: 100;<em>/<br>    }<br>    .parent li:nth-of-type(3){<br>        /</em>position: absolute;<em>/<br><br>        /</em>opacity: 1;*/<br>    }<br><br>    </style><br>    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script><br>    <script type="text/javascript"><br>        $(window).on(“load”,function(){<br>            var num=2;<br>            var flag=1;<br>            $(“.btn”).click(function(){<br>                if(flag){<br>                flag=0;<br>                var aimg=$(“li img”);<br>                aimg.eq(num).animate({<br>                    opacity:0,<br>                },1000,function(){<br>                    aimg.parent(“li”).css(“z-index”,200);//所有元素层级设置一样的<br>                    aimg.eq(num).parent(“li”).css(“z-index”,100);//当前图片已经消失了，所以层级最小<br>                    aimg.css(“opacity”,1);<br>                    if(num<0){
+                        num=2;
+                    }
+                    num--;
+                    aimg.eq(num).parent("li").css("z-index",300);//这是下一张要显示的，所以层级最高
+                    flag=1;
+                });
+                }
+            });
+        });
+    </script><br></head><br><body><br>    <div class="parent"><br>        <li><img src="image/photos/a.jpg"></li><br>        <li><img src="image/photos/b.jpg"></li><br>        <li><img src="image/photos/c.jpg"></li><br>    </div><br>    <input class="btn" type="button" value="下一张"><br></body><br></html>
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2016/09/06/一张图渐变消失下面的图慢慢出现的方法/" style="float: left;">
-        ← 一张图渐变消失下面的图慢慢出现的方法
-    </a>
     
-    
-    <a class="pull-right" href="/2016/06/22/清浮动的几种方法/">
-        清浮动的几种方法 →
+    <a class="pull-right" href="/2016/09/05/css实现背景渐变/">
+        css实现背景渐变 →
     </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/09/05/css实现背景渐变/" data-title="css实现背景渐变" data-url="http://yoursite.com/2016/09/05/css实现背景渐变/"></div>
+<div class="ds-thread" data-thread-key="2016/09/06/一张图渐变消失下面的图慢慢出现的方法/" data-title="一张图渐变消失下面的图慢慢出现的方法" data-url="http://yoursite.com/2016/09/06/一张图渐变消失下面的图慢慢出现的方法/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"duoshuo_name"};
 (function() {
