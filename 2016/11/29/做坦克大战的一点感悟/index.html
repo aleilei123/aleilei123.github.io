@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>做坦克大战的一点感悟 | Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="http://aleilei123.github.io/model.github.io/" target="_BLANK" class="animsition-link">mydemo</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <!-- ============================ Hero Image =========================== -->
+
+        <section id="hero" class="scrollme">
+            <div class="container-fluid element-img" style="background: url(/img/bg_1.jpg) no-repeat center center fixed;background-size: cover">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                            	
+                                <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                                <p></p>
+				    			
+                                <h2></h2>
+                                <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+				    			
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <div class="herofade beige-dk"></div>
+            </div>
+        </section>
+
+        <!-- Height spacing helper -->
+        <div class="heightblock"></div>
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Hero Image =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-11-29T07:36:10.000Z" itemprop="datePublished">
+          2016-11-29
+      </time>
+    
+</span>
+                <h1>做坦克大战的一点感悟</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>###小时候很喜欢玩小霸王，喜欢玩坦克大战。学了前端，想用canvas做一下坦克大战，查阅了很多资料，也看过别人的博客感悟，终于完成。现在分享一下自己的一些心得体会~~ ###</p>
+<p>###本游戏主要实现了自己的坦克（英雄坦克）位移以及射击敌人，敌人坦克自由移动，以并在子弹消亡后以0.6的概率发射子弹。打中彩色坦克可以出现特效，如生命值增加，敌方坦克消除以及老巢周围出现瓷砖，碰撞检测等21个关卡。###</p>
+<p>###成品可见网址<a href="www.baidu.com"></a>###</p>
+<p>####1.做坦克的第一步就是让自己的坦克动起来####</p>
+<p>#####a).canvas绘图#####<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ctx.drawImage(oImage,img.x,img.y,width,height,x,y,width1,height1);</span><br><span class="line">&lt;!-- img.x,img.y表示在大图片上要截取的小图片位置 --&gt;</span><br><span class="line">&lt;!-- width,height表示在大图上截取小图的宽高 --&gt;</span><br><span class="line">&lt;!-- 后面x,y表示画布上的坐标 --&gt;</span><br></pre></td></tr></table></figure></p>
+<p>#####绘图有一个问题需要注意，图片要在onload之后才可以出现（这个问题找bug找了好久），由于我们是不断刷新页面的，因此，放在setInterval函数中可以解决。#####</p>
+<p>#####b).实现坦克上下左右运动#####</p>
+<p>######一开始，觉得就是键盘事件，有什么难的。按下就调用moveup，movedown等函数实现坦克运动，后来发现用户体验不好，因为键盘按下第一个后要隔一段时间才会实现连续触发。解决办法是给坦克对象设置state状态，如：键盘按下w，使得state.up=true，然后运动函数之前判断state状态，这样解决了第一个按下要过一段时间才触发的问题。######<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 键盘绑定事件 --&gt;</span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- 这个插件推荐一个博客 https://github.com/RobertWHurst/KeyboardJS--&gt;</span></span><br><span class="line">    keyboardJS.bind('w', function(e) &#123;</span><br><span class="line">            state.up=true;</span><br><span class="line">        &#125;,function()&#123;</span><br><span class="line">            state.up=false;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 坦克类里面这样实现--&gt;</span></span><br><span class="line">    function herotanks(x,y,dir,speed,size,state)&#123;</span><br><span class="line">    this.moveup=function()&#123;</span><br><span class="line">        if(herobrike(this)&amp;&amp;this.y&gt;0)&#123;</span><br><span class="line">            this.y-=this.speed;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        this.dir=0;</span><br><span class="line">    &#125;;</span><br><span class="line">    this.run=function()&#123;</span><br><span class="line">        if(state.up)&#123;</span><br><span class="line">            this.moveup();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>####2.做坦克的第二步是绘制地图#####</p>
+<p>#####绘制地图就是存一个地图数组######<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 地图数组</span><br><span class="line"> * 1：水泥墙 2：铁墙 3：草 4：水 5：冰 9：家</span><br><span class="line"> */</span><br><span class="line">var map1 = </span><br><span class="line">[</span><br><span class="line">    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],</span><br><span class="line">    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],</span><br><span class="line">    [0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0],</span><br><span class="line">    [0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0],</span><br><span class="line">    [0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0],</span><br><span class="line">    [0,0,1,1,0,0,1,1,0,0,1,1,2,2,1,1,0,0,1,1,0,0,1,1,0,0],</span><br><span class="line">    [0,0,1,1,0,0,1,1,0,0,1,1,2,2,1,1,0,0,1,1,0,0,1,1,0,0],</span><br><span class="line">    [0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0],</span><br><span class="line">    [0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0],</span><br><span class="line">    [0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0],</span><br><span class="line">    [0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0],</span><br><span class="line">    [0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0],</span><br><span class="line">    [1,1,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,1,1],</span><br><span class="line">    [2,2,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,2,2],</span><br><span class="line">    [0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0],</span><br><span class="line">    [0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0],</span><br><span class="line">    [0,0,1,1,0,0,1,1,0,0,1,1,1,1,1,1,0,0,1,1,0,0,1,1,0,0],</span><br><span class="line">    [0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0],</span><br><span class="line">    [0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0],</span><br><span class="line">    [0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0],</span><br><span class="line">    [0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0],</span><br><span class="line">    [0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0],</span><br><span class="line">    [0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0],</span><br><span class="line">    [0,0,1,1,0,0,1,1,0,0,0,1,1,1,1,0,0,0,1,1,0,0,1,1,0,0],</span><br><span class="line">    [0,0,0,0,0,0,0,0,0,0,0,1,9,8,1,0,0,0,0,0,0,0,0,0,0,0],</span><br><span class="line">    [0,0,0,0,0,0,0,0,0,0,0,1,8,8,1,0,0,0,0,0,0,0,0,0,0,0],</span><br><span class="line">];</span><br></pre></td></tr></table></figure></p>
+<p>#####通过地图数组画对应的图片就很简单了，和画坦克一样就可以了#####</p>
+<p>####3.坦克大战第三步，画子弹并动起来####</p>
+<p>#####画子弹要根据坦克的位置确定初始方向和运动方向#####<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bullet</span>(<span class="params">x,y,dir,speed,isalive,type,tank</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.x=x;</span><br><span class="line">    <span class="keyword">this</span>.y=y;</span><br><span class="line">    <span class="keyword">this</span>.dir=dir;</span><br><span class="line">    <span class="keyword">this</span>.speed=speed;</span><br><span class="line">    <span class="keyword">this</span>.isalive=isalive;</span><br><span class="line">    <span class="keyword">this</span>.type=type;</span><br><span class="line">    <span class="keyword">this</span>.tank=tank;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.run=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>.x&lt;=<span class="number">0</span>||<span class="keyword">this</span>.x&gt;=<span class="number">416</span>||<span class="keyword">this</span>.y&lt;=<span class="number">0</span>||<span class="keyword">this</span>.y&gt;=<span class="number">416</span>||<span class="keyword">this</span>.isalive==<span class="literal">false</span>)&#123;</span><br><span class="line">            <span class="keyword">this</span>.isalive=<span class="literal">false</span>;</span><br><span class="line">            clearInterval(<span class="keyword">this</span>.timer);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(<span class="keyword">this</span>.type==<span class="string">"enemy"</span>)&#123;</span><br><span class="line">                <span class="keyword">this</span>.tank.bulletisalive=<span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">switch</span>(<span class="keyword">this</span>.dir)&#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">                    <span class="keyword">this</span>.y-=<span class="keyword">this</span>.speed;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                    <span class="keyword">this</span>.y+=<span class="keyword">this</span>.speed;  </span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                    <span class="keyword">this</span>.x-=<span class="keyword">this</span>.speed;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                    <span class="keyword">this</span>.x+=<span class="keyword">this</span>.speed;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>####4.敌人的坦克，子弹和上面自己的坦克类似，不再赘述####</p>
+<p>####5.各种碰撞检测####</p>
+<p>#####碰撞检测是做游戏的关键，很多终止条件的判断都要靠碰撞检测。想起来之前在leetcode刷过的一个题目，求两个矩形的相交面积。忽然一激灵，放在碰撞检测里面再合适不过了。#####<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- A代表第一个矩阵的左下角的x --&gt;</span><br><span class="line">&lt;!-- B代表第一个矩阵的左下角的y --&gt;</span><br><span class="line">&lt;!-- C代表第一个矩阵的右上角的x --&gt;</span><br><span class="line">&lt;!-- D代表第一个矩阵的右上角的y --&gt;</span><br><span class="line">function overlap( A,  B,  C,  D,  E,  F,  G,  H) &#123;</span><br><span class="line">    var res = (D - B) * (C - A) + (H - F) * (G - E);</span><br><span class="line">    var A1 = Math.max(A, E);</span><br><span class="line">    var B1 = Math.max(B, F);</span><br><span class="line">    var C1 = Math.min(C, G);</span><br><span class="line">    var D1 = Math.min(D, H);</span><br><span class="line">    if (D1 &lt;B1 || C1 &lt;A1) &#123;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        return (D1 - B1) * (C1 - A1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>#####a).需要注意的一个问题#####</p>
+<p>######canvas里面的坐标系y轴是向下的，而数学坐标系里面是向上的。所以我们要输入的y值是canvas的height-y。######</p>
+<p>######b).这是一个大bug######</p>
+<p>######坦克在方向旋转的同时会移动，因此，在碰撞检测环节会出问题（自己做就感觉到了），我目前的处理方法是对坦克进行复位(暂时没有找到更好的办法)######<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(overlap(j*<span class="number">16</span>,<span class="number">416</span>-(i*<span class="number">16</span>+<span class="number">16</span>),j*<span class="number">16</span>+<span class="number">16</span>,<span class="number">416</span>-(i*<span class="number">16</span>),tank.x,<span class="number">416</span>-(tank.y+tank.size),tank.x+tank.size,<span class="number">416</span>-(tank.y-tank.speed)))&#123;</span><br><span class="line">    tank.y=tank.y+tank.speed;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>###6.面向对象思想十分重要###</p>
+<p>####把基本思路想通，细节问题边做边思考会很快。还有要用面向对象思想做，不然，游戏做起来相当痛苦。####<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">tank</span>(<span class="params">x,y,dir,speed,size</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.x=x;</span><br><span class="line">    <span class="keyword">this</span>.y=y;</span><br><span class="line">    <span class="keyword">this</span>.speed=speed;</span><br><span class="line">    <span class="keyword">this</span>.dir=dir;</span><br><span class="line">    <span class="keyword">this</span>.size=size;</span><br><span class="line">    <span class="keyword">this</span>.moveup=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.y-=<span class="keyword">this</span>.speed;</span><br><span class="line">        <span class="keyword">this</span>.dir=<span class="number">0</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">this</span>.moveright=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.x+=<span class="keyword">this</span>.speed;</span><br><span class="line">        <span class="keyword">this</span>.dir=<span class="number">3</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">this</span>.movedown=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.y+=<span class="keyword">this</span>.speed;</span><br><span class="line">        <span class="keyword">this</span>.dir=<span class="number">1</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">this</span>.moveleft=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.x-=<span class="keyword">this</span>.speed;</span><br><span class="line">        <span class="keyword">this</span>.dir=<span class="number">2</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 自己的坦克</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">herotanks</span>(<span class="params">x,y,dir,speed,size,state</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//下面两句话的作用是通过对象冒充，达到继承的效果</span></span><br><span class="line">    <span class="keyword">this</span>.tank=tank;</span><br><span class="line">    <span class="keyword">this</span>.tank(x,y,dir,speed,size);  </span><br><span class="line">    <span class="xml"><span class="comment">&lt;!--除了继承的属性和方法，还有自己的属性和方法 --&gt;</span></span><br><span class="line">    this.shoot=function()&#123;</span><br><span class="line">        if(herobullet==null||herobullet.isalive==false)&#123;</span><br><span class="line">            switch(this.dir)&#123;</span><br><span class="line">            case 0:</span><br><span class="line">            herobullet=new bullet(this.x+14,this.y,this.dir,3,true,"hero",this);</span><br><span class="line">            break;</span><br><span class="line">            case 1:</span><br><span class="line">            herobullet=new bullet(this.x+14,this.y+30,this.dir,3,true,"hero",this);</span><br><span class="line">            break;</span><br><span class="line">            case 2:</span><br><span class="line">            herobullet=new bullet(this.x,this.y+14,this.dir,3,true,"hero",this);</span><br><span class="line">            break;</span><br><span class="line">            case 3:</span><br><span class="line">            herobullet=new bullet(this.x+30,this.y+14,this.dir,3,true,"hero",this);</span><br><span class="line">            break;</span><br><span class="line">           &#125;   </span><br><span class="line">           herobullet.timer=window.setInterval("herobullet.run()",15);</span><br><span class="line">        &#125;    </span><br><span class="line">   &#125;;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>###总结###</p>
+<p>####以上就是我对坦克的一些想法，存在几个问题未解决，如：碰撞检测的优化，除了复位的办法是否有更好的办法。一开始是思想的问题，做到后面就是工作量的问题了，加油！####</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/10/28/js哈希表/">
+        js哈希表 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/11/29/做坦克大战的一点感悟/" data-title="做坦克大战的一点感悟" data-url="http://yoursite.com/2016/11/29/做坦克大战的一点感悟/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
