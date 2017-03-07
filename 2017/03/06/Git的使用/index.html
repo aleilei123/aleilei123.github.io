@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>Git的使用 | Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="http://aleilei123.github.io/model.github.io/" target="_BLANK" class="animsition-link">mydemo</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <!-- ============================ Hero Image =========================== -->
+
+        <section id="hero" class="scrollme">
+            <div class="container-fluid element-img" style="background: url(/img/bg_1.jpg) no-repeat center center fixed;background-size: cover">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                            	
+                                <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                                <p></p>
+				    			
+                                <h2></h2>
+                                <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+				    			
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <div class="herofade beige-dk"></div>
+            </div>
+        </section>
+
+        <!-- Height spacing helper -->
+        <div class="heightblock"></div>
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Hero Image =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2017-03-06T13:05:55.000Z" itemprop="datePublished">
+          2017-03-06
+      </time>
+    
+</span>
+                <h1>Git的使用</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="学了好久的git，这次打算整理一下常见指令和大家分享"><a href="#学了好久的git，这次打算整理一下常见指令和大家分享" class="headerlink" title="学了好久的git，这次打算整理一下常见指令和大家分享"></a>学了好久的git，这次打算整理一下常见指令和大家分享</h3><h5 id="1-创建版本库"><a href="#1-创建版本库" class="headerlink" title="1.创建版本库"></a>1.创建版本库</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$mkdir testgit</span><br><span class="line">$cd testgit</span><br><span class="line">$pwd  //查看当前文件路径</span><br><span class="line">/c/Users/aleilei/testgit  //文件的路径</span><br></pre></td></tr></table></figure>
+<h5 id="2-通过git-init命令把这个目录变成Git可以管理的仓库"><a href="#2-通过git-init命令把这个目录变成Git可以管理的仓库" class="headerlink" title="2.通过git init命令把这个目录变成Git可以管理的仓库"></a>2.通过git init命令把这个目录变成Git可以管理的仓库</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git init  </span><br><span class="line">Initialized empty Git repository in /Users/michael/learngit/.git/</span><br></pre></td></tr></table></figure>
+<h5 id="3-把文件添加到版本库（最好使用Nodepad-，而不是记事本）"><a href="#3-把文件添加到版本库（最好使用Nodepad-，而不是记事本）" class="headerlink" title="3.把文件添加到版本库（最好使用Nodepad++，而不是记事本）"></a>3.把文件添加到版本库（最好使用Nodepad++，而不是记事本）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git init  </span><br><span class="line">Initialized empty Git repository in /Users/michael/learngit/.git/</span><br></pre></td></tr></table></figure>
+<h5 id="4-编写一个readme-txt文件，放在testgit目录下，内容如下："><a href="#4-编写一个readme-txt文件，放在testgit目录下，内容如下：" class="headerlink" title="4.编写一个readme.txt文件，放在testgit目录下，内容如下："></a>4.编写一个readme.txt文件，放在testgit目录下，内容如下：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git is a version control system.</span><br><span class="line">Git is free software.</span><br></pre></td></tr></table></figure>
+<h5 id="5-把readme-txt文件进行添加-添加到的是暂存区"><a href="#5-把readme-txt文件进行添加-添加到的是暂存区" class="headerlink" title="5.把readme.txt文件进行添加,添加到的是暂存区"></a>5.把readme.txt文件进行添加,添加到的是暂存区</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add readme.txt</span><br></pre></td></tr></table></figure>
+<h5 id="6-把readme-txt文件添加到仓库-并添加注释信息"><a href="#6-把readme-txt文件添加到仓库-并添加注释信息" class="headerlink" title="6.把readme.txt文件添加到仓库,并添加注释信息"></a>6.把readme.txt文件添加到仓库,并添加注释信息</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m &quot;add readme.txt file&quot;</span><br><span class="line">[master (root-commit) eb83f48] add readme.txt file</span><br><span class="line">1 file changed, 2 insertions(+)</span><br><span class="line">create mode 100644 readme.txt</span><br></pre></td></tr></table></figure>
+<h5 id="6-1-add和commit的区别"><a href="#6-1-add和commit的区别" class="headerlink" title="6.1 add和commit的区别"></a>6.1 add和commit的区别</h5><h6 id="因为commit可以一次提交很多文件，所以你可以多次add不同的文件，比如："><a href="#因为commit可以一次提交很多文件，所以你可以多次add不同的文件，比如：" class="headerlink" title="因为commit可以一次提交很多文件，所以你可以多次add不同的文件，比如："></a>因为commit可以一次提交很多文件，所以你可以多次add不同的文件，比如：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git add file1.txt</span><br><span class="line">$ git add file2.txt file3.txt</span><br><span class="line">$ git commit -m &quot;add 3 files&quot;</span><br></pre></td></tr></table></figure>
+<h5 id="6-把readme-txt文件添加到仓库-并添加注释信息-1"><a href="#6-把readme-txt文件添加到仓库-并添加注释信息-1" class="headerlink" title="6.把readme.txt文件添加到仓库,并添加注释信息"></a>6.把readme.txt文件添加到仓库,并添加注释信息</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m &quot;add readme.txt file&quot;</span><br><span class="line">[master (root-commit) eb83f48] add readme.txt file</span><br><span class="line">1 file changed, 2 insertions(+)</span><br><span class="line">create mode 100644 readme.txt</span><br></pre></td></tr></table></figure>
+<h5 id="7-修改readme-txt文件，改成如下内容："><a href="#7-修改readme-txt文件，改成如下内容：" class="headerlink" title="7.修改readme.txt文件，改成如下内容："></a>7.修改readme.txt文件，改成如下内容：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git is a distributed version control system.</span><br><span class="line">Git is free software.</span><br></pre></td></tr></table></figure>
+<h5 id="7-1-运行git-status命令看看结果："><a href="#7-1-运行git-status命令看看结果：" class="headerlink" title="7.1 运行git status命令看看结果："></a>7.1 运行git status命令看看结果：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git status //随时掌握工作区状态</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged for commit:</span><br><span class="line">(use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span><br><span class="line">(use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)</span><br><span class="line"></span><br><span class="line">    modified:   readme.txt</span><br><span class="line"></span><br><span class="line">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span><br></pre></td></tr></table></figure>
+<h6 id="上面的命令告诉我们，readme-txt被修改过了，但还没有准备提交的修改"><a href="#上面的命令告诉我们，readme-txt被修改过了，但还没有准备提交的修改" class="headerlink" title="上面的命令告诉我们，readme.txt被修改过了，但还没有准备提交的修改"></a>上面的命令告诉我们，readme.txt被修改过了，但还没有准备提交的修改</h6><h5 id="7-2-git-diff查看修改了哪些内容："><a href="#7-2-git-diff查看修改了哪些内容：" class="headerlink" title="7.2 git diff查看修改了哪些内容："></a>7.2 git diff查看修改了哪些内容：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ git diff</span><br><span class="line">diff --git a/readme.txt b/readme.txt</span><br><span class="line">index d8036c1..013b5bc 100644</span><br><span class="line">--- a/readme.txt</span><br><span class="line">+++ b/readme.txt</span><br><span class="line">@@ -1,2 +1,2 @@</span><br><span class="line">-Git is a version control system.</span><br><span class="line">+Git is a distributed version control system.</span><br><span class="line">Git is free software.</span><br><span class="line">\No newline at end of file</span><br></pre></td></tr></table></figure>
+<h5 id="7-3-修改后可以用git-add-git-commit-git-status操作"><a href="#7-3-修改后可以用git-add-git-commit-git-status操作" class="headerlink" title="7.3 修改后可以用git add,git commit,git status操作"></a>7.3 修改后可以用git add,git commit,git status操作</h5><h5 id="8-再次修改readme-txt后进行版本回退操作"><a href="#8-再次修改readme-txt后进行版本回退操作" class="headerlink" title="8 再次修改readme.txt后进行版本回退操作"></a>8 再次修改readme.txt后进行版本回退操作</h5><h5 id="8-1-修改内容如下"><a href="#8-1-修改内容如下" class="headerlink" title="8.1 修改内容如下"></a>8.1 修改内容如下</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Git is a distributed version control system.</span><br><span class="line">Git is free software distributed under the GPL.</span><br></pre></td></tr></table></figure>
+<h6 id="修改后可以用git-add-git-commit提交"><a href="#修改后可以用git-add-git-commit提交" class="headerlink" title="修改后可以用git add,git commit提交"></a>修改后可以用git add,git commit提交</h6><h5 id="8-2-git提交的三个版本"><a href="#8-2-git提交的三个版本" class="headerlink" title="8.2 git提交的三个版本"></a>8.2 git提交的三个版本</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Git is a version control system.</span><br><span class="line">Git is free software.</span><br><span class="line"></span><br><span class="line">Git is a distributed version control system.</span><br><span class="line">Git is free software.</span><br><span class="line"></span><br><span class="line">Git is a distributed version control system.</span><br><span class="line">Git is free software distributed under the GPL.</span><br></pre></td></tr></table></figure>
+<h5 id="8-3-git-log查看历史记录"><a href="#8-3-git-log查看历史记录" class="headerlink" title="8.3 git log查看历史记录"></a>8.3 git log查看历史记录</h5><h6 id="git-log命令显示从最近到最远的提交日志"><a href="#git-log命令显示从最近到最远的提交日志" class="headerlink" title="git log命令显示从最近到最远的提交日志"></a>git log命令显示从最近到最远的提交日志</h6><h6 id="git-log-–pretty-oneline显示版本号"><a href="#git-log-–pretty-oneline显示版本号" class="headerlink" title="git log –pretty=oneline显示版本号"></a>git log –pretty=oneline显示版本号</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git log --pretty=oneline</span><br><span class="line">1a6e700ab5179193d8d172e0772851a1bb308e0c change3</span><br><span class="line">2c242a49be6f858c0ff5e68d745be3aa0b505074 change2</span><br><span class="line">5dd488e2614bc561ef52267b208fca657fc57357 add 3 files</span><br><span class="line">eb83f48a134d86641d2e161bdb178a82bae4bead add readme.txt file</span><br></pre></td></tr></table></figure>
+<h5 id="8-4版本回退，回退到上一个版本"><a href="#8-4版本回退，回退到上一个版本" class="headerlink" title="8.4版本回退，回退到上一个版本"></a>8.4版本回退，回退到上一个版本</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD^</span><br><span class="line">HEAD is now at 2c242a4 change2</span><br></pre></td></tr></table></figure>
+<h5 id="8-5-cat-readme-txt查看文件内容"><a href="#8-5-cat-readme-txt查看文件内容" class="headerlink" title="8.5 cat readme.txt查看文件内容"></a>8.5 cat readme.txt查看文件内容</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cat readme.txt</span><br><span class="line">Git is a distributed version control system.</span><br><span class="line">Git is free software.</span><br></pre></td></tr></table></figure>
+<h5 id="8-6-如果回退错误不想回退怎么办？"><a href="#8-6-如果回退错误不想回退怎么办？" class="headerlink" title="8.6 如果回退错误不想回退怎么办？"></a>8.6 如果回退错误不想回退怎么办？</h5><h6 id="办法其实还是有的，只要上面的命令行窗口还没有被关掉，你就可以顺着往上找啊找啊，找到那个change3的commit-id为1a6e700-，于是就可以指定回到未来的某个版本："><a href="#办法其实还是有的，只要上面的命令行窗口还没有被关掉，你就可以顺着往上找啊找啊，找到那个change3的commit-id为1a6e700-，于是就可以指定回到未来的某个版本：" class="headerlink" title="办法其实还是有的，只要上面的命令行窗口还没有被关掉，你就可以顺着往上找啊找啊，找到那个change3的commit id为1a6e700..，于是就可以指定回到未来的某个版本："></a>办法其实还是有的，只要上面的命令行窗口还没有被关掉，你就可以顺着往上找啊找啊，找到那个change3的commit id为1a6e700..，于是就可以指定回到未来的某个版本：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard 1a6e700</span><br></pre></td></tr></table></figure>
+<h6 id="关掉了电脑，第二天早上就后悔了，想恢复到新版本怎么办？找不到新版本的commit-id怎么办？"><a href="#关掉了电脑，第二天早上就后悔了，想恢复到新版本怎么办？找不到新版本的commit-id怎么办？" class="headerlink" title="关掉了电脑，第二天早上就后悔了，想恢复到新版本怎么办？找不到新版本的commit id怎么办？"></a>关掉了电脑，第二天早上就后悔了，想恢复到新版本怎么办？找不到新版本的commit id怎么办？</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog  //用来记录你的每一次命令</span><br></pre></td></tr></table></figure>
+<h5 id="9-每次修改，如果不add到暂存区，那就不会加入到commit中"><a href="#9-每次修改，如果不add到暂存区，那就不会加入到commit中" class="headerlink" title="9.每次修改，如果不add到暂存区，那就不会加入到commit中"></a>9.每次修改，如果不add到暂存区，那就不会加入到commit中</h5><p>######第一次修改 -&gt; git add -&gt; 第二次修改 -&gt; git commit,提交的是第一次修改的内容 ######</p>
+<h5 id="10-撤销修改"><a href="#10-撤销修改" class="headerlink" title="10.撤销修改"></a>10.撤销修改</h5><h6 id="10-1-当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git-checkout-–-readme-txt"><a href="#10-1-当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git-checkout-–-readme-txt" class="headerlink" title="10.1 当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout – readme.txt"></a>10.1 当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout – readme.txt</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -- readme.txt</span><br></pre></td></tr></table></figure>
+<h6 id="10-2-当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步"><a href="#10-2-当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步" class="headerlink" title="10.2 当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步"></a>10.2 当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset HEAD file</span><br><span class="line">$ git checkout -- readme.txt</span><br></pre></td></tr></table></figure>
+<h6 id="10-3-已经提交了不合适的修改到版本库时，想要撤销本次提交"><a href="#10-3-已经提交了不合适的修改到版本库时，想要撤销本次提交" class="headerlink" title="10.3 已经提交了不合适的修改到版本库时，想要撤销本次提交"></a>10.3 已经提交了不合适的修改到版本库时，想要撤销本次提交</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard HEAD^</span><br><span class="line">$ git checkout -- readme.txt</span><br></pre></td></tr></table></figure>
+<h5 id="11-删除文件"><a href="#11-删除文件" class="headerlink" title="11.删除文件"></a>11.删除文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git rm -- readme.txt</span><br><span class="line">$ git commit  //确认删除的话提交</span><br></pre></td></tr></table></figure>
+<h5 id="12-远程仓库"><a href="#12-远程仓库" class="headerlink" title="12.远程仓库"></a>12.远程仓库</h5><h5 id="12-1-关联远程仓库"><a href="#12-1-关联远程仓库" class="headerlink" title="12.1 关联远程仓库"></a>12.1 关联远程仓库</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add orgin git@github.com:aleilei123/demo.github.io.git</span><br></pre></td></tr></table></figure>
+<h5 id="12-2-把本地库的所有内容推送到远程库上"><a href="#12-2-把本地库的所有内容推送到远程库上" class="headerlink" title="12.2 把本地库的所有内容推送到远程库上"></a>12.2 把本地库的所有内容推送到远程库上</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
+<h5 id="12-3-克隆一个本地库"><a href="#12-3-克隆一个本地库" class="headerlink" title="12.3 克隆一个本地库"></a>12.3 克隆一个本地库</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone git@github.com:aleilei123/demo.github.io.git</span><br></pre></td></tr></table></figure>
+<h5 id="13-创建分支"><a href="#13-创建分支" class="headerlink" title="13. 创建分支"></a>13. 创建分支</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b dev</span><br><span class="line">Switched to a new branch &apos;dev&apos;</span><br></pre></td></tr></table></figure>
+<h5 id="13-1-然后，用git-branch命令查看当前分支"><a href="#13-1-然后，用git-branch命令查看当前分支" class="headerlink" title="13.1 然后，用git branch命令查看当前分支"></a>13.1 然后，用git branch命令查看当前分支</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* dev</span><br><span class="line">master</span><br></pre></td></tr></table></figure>
+<h5 id="13-2-把dev分支的工作合并到master上"><a href="#13-2-把dev分支的工作合并到master上" class="headerlink" title="13.2 把dev分支的工作合并到master上"></a>13.2 把dev分支的工作合并到master上</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout master</span><br><span class="line">$ git merge dev</span><br></pre></td></tr></table></figure>
+<h5 id="13-3-删除分支"><a href="#13-3-删除分支" class="headerlink" title="13.3 删除分支"></a>13.3 删除分支</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d dev</span><br><span class="line">Deleted branch dev (was fec145a).</span><br></pre></td></tr></table></figure>
+<h5 id="13-4-查看分支"><a href="#13-4-查看分支" class="headerlink" title="13.4 查看分支"></a>13.4 查看分支</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/11/29/做坦克大战的一点感悟/">
+        做坦克大战的一点感悟 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2017/03/06/Git的使用/" data-title="Git的使用" data-url="http://yoursite.com/2017/03/06/Git的使用/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
